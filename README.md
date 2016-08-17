@@ -35,7 +35,7 @@ This application prints following numeric sequences for the given number.
 
 ### Additional Information
 - Technologies used are Asp.Net MVC, .Net Framework 4.5, C#.
-- Buit using Visual Studio Community Edition.
+- Built using Visual Studio Community Edition.
 - Visual Studio Unit testing framework is used to test Numeric Sequence service.
 - Selenium.WebDriver.2.53.1 is used for UI driven functional testing.
 
