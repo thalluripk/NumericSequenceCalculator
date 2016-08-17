@@ -1,0 +1,72 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+@model NumericSequenceCalculator.Models.InputNumber
+<div class="jumbotron">
+    <h1>Numeric Sequence Calculator</h1>
+
+</div>
+
+
+@using (Html.BeginForm("Index", "Home", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="row">
+        <div class="col-md-4">
+            <b>Enter an integer number (must be greater than 0) to calculate the following types of sequence.</b>
+            <ul style="font-size:12px">
+                <li>Numbers up to given number</li>
+                <li>Odd numbers up to given number</li>
+                <li>Even numbers up to given number</li>
+                <li>
+                    Encoded numbers up to given number
+                    <ul>
+                        <li>If divided by 3, print 'C'</li>
+                        <li>If divided by 5, print 'E'</li>
+                        <li>If divided by both, print 'Z'</li>
+                    </ul>
+                </li>
+                <li>Fibonacci sequence up to given number</li>
+            </ul>
+        </div>
+        <div class="col-md-4">
+            <div class="input-group">
+
+                @Html.TextBoxFor(m => m.Num, new { @class = "form-control", placeholder = "Provide an integer number" })
+                
+                <div id="errorMessage">
+                    @Html.ValidationMessageFor(m => m.Num, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <br />
+            <div class="input-group">
+                <input type="submit" id="calculate" class="form-control" value="Calculate" />
+            </div>
+
+            @if (ViewData["SequenceStrings"] != null)
+            {
+                Dictionary<string, string>
+                    sequenceStrings = ViewData["SequenceStrings"] as Dictionary<string, string>;
+
+
+                foreach (var sequence in sequenceStrings)
+                {
+                    <p>
+                        <h4>@sequence.Key</h4>
+                        <div id="@sequence.Key">
+                            @sequence.Value
+                        </div>
+                    </p>
+                }
+
+            }
+        </div>
+        <div class="col-md-4">
+
+        </div>
+
+    </div>
+}
+

@@ -1,0 +1,172 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Numeric Sequence Calculator</title>
+    <style>
+        body {
+            background: #fff;
+            color: #505050;
+            font: 14px 'Segoe UI', tahoma, arial, helvetica, sans-serif;
+            margin: 20px;
+            padding: 0;
+        }
+
+        #header {
+            background: #efefef;
+            padding: 0;
+        }
+
+        h1 {
+            font-size: 48px;
+            font-weight: normal;
+            margin: 0;
+            padding: 0 30px;
+            line-height: 150px;
+        }
+
+        p {
+            font-size: 20px;
+            color: #fff;
+            background: #969696;
+            padding: 0 30px;
+            line-height: 50px;
+        }
+
+        #main {
+            padding: 5px 30px;
+        }
+
+        .section {
+            width: 21.7%;
+            float: left;
+            margin: 0 0 0 4%;
+        }
+
+            .section h2 {
+                font-size: 13px;
+                text-transform: uppercase;
+                margin: 0;
+                border-bottom: 1px solid silver;
+                padding-bottom: 12px;
+                margin-bottom: 8px;
+            }
+
+            .section.first {
+                margin-left: 0;
+            }
+
+                .section.first h2 {
+                    font-size: 24px;
+                    text-transform: none;
+                    margin-bottom: 25px;
+                    border: none;
+                }
+
+                .section.first li {
+                    border-top: 1px solid silver;
+                    padding: 8px 0;
+                }
+
+            .section.last {
+                margin-right: 0;
+            }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            line-height: 20px;
+        }
+
+        li {
+            padding: 4px 0;
+        }
+
+        a {
+            color: #267cb2;
+            text-decoration: none;
+        }
+
+            a:hover {
+                text-decoration: underline;
+            }
+    </style>
+</head>
+<body>
+
+    <div id="header">
+        <h1>Numeric Sequence Calculator</h1>
+
+    </div>
+
+    <div id="main">
+        <div class="section first">
+            <h2>This application generates the numeric sequence for the given number as follows.</h2>
+            <ul>
+                <li>Numbers up to given number</li>
+                <li>Odd numbers up to given number</li>
+                <li>Even numbers up to given number</li>
+                <li>
+                    Encoded numbers up to given number
+                    <ul>
+                        <li>If divided by 3, print 'C'</li>
+                        <li>If divided by 5, print 'E'</li>
+                        <li>If divided by both, print 'Z'</li>
+                    </ul>
+                </li>
+                <li>Fibonacci sequence up to given number</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>How to run the application?</h2>
+            <p>This application consists of following projects.
+
+            <ul>
+                <li>NumericSequenceCalculator</li>
+                <ul>
+                    <li>This is a Asp.Net MVC application runs on .Net Framework 4.5.2</li>
+                </ul>
+                <li>NumericSequenceCalculator.Tests
+                    <ul>
+                        <li>This is a Visual Studio Test project .Net Framework 4.5.2</li>
+                    </ul>
+                </li>
+            </ul>
+            <h3>Prerequisites</h3>
+            <ul>
+                <li>.Net Framework 4.5.2</li>
+                <li>Asp.Net MVC</li>
+                <li>Visual Studio 2015</li>
+                <li>Google Chrome Browser</li>
+            </ul>
+
+            <h3>Steps to execute</h3>
+            <ol>
+                <li>Download Visual Studio Community/enterprise/professional edition.</li>
+                <li>Open the solution file 'NumericSequenceCalculator'.</li>
+                <li>Right click on 'NumericSequenceCalculator' project and select 'Set as StartUp Project'. </li>
+                <li>Right click on 'NumericSequenceCalculator' project and select 'Properties'. In the properties window, select 'Web' tab. Under the debugger section, uncheck 'Enable Edit and Continue', if it is not already unchecked.</li>
+                <li>Build and run NumericSequenceCalculator solution and wait for the Visual Studio to open the web browser. When the browser has rendered the application, perfrom manual testing.</li>
+                <li>After the manual testing, go to Visual Studio and stop debugging. Application would keep running as it is hosted by IIS Express.</li>
+                <li>Copy NumericSequenceCalculator.Tests/ChromeWebDrive/chromedriver.exe file to NumericSequenceCalculator.Tests\bin\Debug folder.</li>
+                <li>In Visual Studio, Go to menu, click on Test > Windows > Test Explorer. This will open up Test Explorer. Click on 'Run All' link to execute all the test cases.  </li>
+            </ol>
+            </p>
+
+            <h3>Technologies Used</h3>
+            <ul>
+                <li>Asp.Net MVC, .Net Framework 4.5, C#.</li>
+                <li>Buit using Visual Studio Community Edition.</li>
+                <li>Visual Studio Unit testing framework is used to test Numeric Sequence service.</li>
+                <li>Selenium.WebDriver.2.53.1 is used for UI driven functional testing.</li>
+                <li>NOTE: Only chrome browser is used for test automation. It is recommened to use the same browser.</li>
+            </ul>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
